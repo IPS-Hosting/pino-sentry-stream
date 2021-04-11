@@ -80,7 +80,6 @@ __metadata:
     prettier: 2.2.1
     semantic-release: 17.4.2
     ts-node: 9.1.1
-    tslib: 2.2.0
     typescript: 4.2.4
   peerDependencies:
     "@sentry/node": ^6.0.0
@@ -5829,13 +5828,6 @@ fsevents@~2.3.1:
     ts-node-transpile-only: dist/bin-transpile.js
     ts-script: dist/bin-script-deprecated.js
   checksum: a90db4a342872cd0e7a80babdfcb15d2f7c06e700d735003098f7cc79db575c3380580c58a19ae0d0eaab553af083651d4237060c92170e6f8ac4e64693113ea
-  languageName: node
-  linkType: hard
-
-"tslib@npm:2.2.0":
-  version: 2.2.0
-  resolution: "tslib@npm:2.2.0"
-  checksum: 2d35468c470410871c5246e43f12dcb6d0fc363b617c176f26443b9530e5c5ee8448966892a42956168d8f495da7865bda33dfe82c26c91991e28999974a618f
   languageName: node
   linkType: hard
 
