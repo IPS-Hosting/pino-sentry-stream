@@ -18,6 +18,9 @@
     "dist/**/*.js.map",
     "dist/**/*.d.ts"
   ],
+  "publishConfig": {
+	"access": "public"
+  },
   "peerDependencies": {
     "@sentry/node": "^6.0.0"
   },
