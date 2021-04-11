@@ -3,6 +3,13 @@
 
 ### Bug Fixes
 
+* dont import helpers ([2386a95](https://github.com/IPS-Hosting/pino-sentry-stream/commit/2386a95a7ba27c8773e3c3f02d36373f64179f2b))
+
+# 1.0.0 (2021-04-11)
+
+
+### Bug Fixes
+
 * update lockfile ([c578607](https://github.com/IPS-Hosting/node-typescript-starter/commit/c578607246654bcc41da07064402710d9d4296ad))
 
 
