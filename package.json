@@ -1,6 +1,6 @@
 {
   "name": "@ips-hosting/pino-sentry-stream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A pino stream to automatically pass errors to Sentry.",
   "license": "MIT",
   "scripts": {
@@ -19,7 +19,7 @@
     "dist/**/*.d.ts"
   ],
   "publishConfig": {
-	"access": "public"
+    "access": "public"
   },
   "peerDependencies": {
     "@sentry/node": "^6.0.0"

@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v1.0.0...v1.0.1) (2021-04-11)
+
+
+### Bug Fixes
+
+* make package public ([8782e69](https://github.com/IPS-Hosting/pino-sentry-stream/commit/8782e694a6e1e35475bfdf624635fe71a282dd1e))
+
 # 1.0.0 (2021-04-11)
 
 
