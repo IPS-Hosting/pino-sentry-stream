@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v1.0.1...v1.0.2) (2021-04-27)
+
+
+### Bug Fixes
+
+* add main, types and sideEffects fields to package.json ([50d3d84](https://github.com/IPS-Hosting/pino-sentry-stream/commit/50d3d84fd921fc902f9e46ffb36f34c429d1ce99))
+
 ## [1.0.1](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v1.0.0...v1.0.1) (2021-04-11)
 
 
