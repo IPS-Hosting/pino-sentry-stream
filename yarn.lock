@@ -67,7 +67,7 @@ __metadata:
     "@semantic-release/npm": 7.1.1
     "@sentry/node": 6.2.5
     "@tsconfig/node14": 1.0.0
-    "@types/node": 14.14.37
+    "@types/node": 16.11.26
     "@types/semantic-release": 17.2.0
     "@typescript-eslint/eslint-plugin": 4.21.0
     "@typescript-eslint/parser": 4.21.0
@@ -668,10 +668,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:14.14.37":
+"@types/node@npm:*":
   version: 14.14.37
   resolution: "@types/node@npm:14.14.37"
   checksum: 5e2d9baf7594ebacaf016716515f30de0765169412787f981481c2fb8b468923149bb9e2e3219ee672399811672ceddc339a7372a61cf15bc656836a5494d991
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:16.11.26":
+  version: 16.11.26
+  resolution: "@types/node@npm:16.11.26"
+  checksum: 478d5c315f27813c1bc717b2c1ebe052d7030810107db9dd551e2d68a7ea89c50b2dcbab8fb9a0640b33e31733924983f33abf2092b8b097873ff5a9a4027d5e
   languageName: node
   linkType: hard
 
