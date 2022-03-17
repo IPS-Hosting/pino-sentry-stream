@@ -81,7 +81,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 5.15.0
     "@typescript-eslint/parser": 5.15.0
     "@typescript-eslint/typescript-estree": 5.15.0
-    dotenv: 8.6.0
+    dotenv: 9.0.2
     eslint: 8.11.0
     eslint-config-prettier: 8.5.0
     eslint-plugin-prettier: 4.0.0
@@ -1938,10 +1938,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:8.6.0":
-  version: 8.6.0
-  resolution: "dotenv@npm:8.6.0"
-  checksum: 38e902c80b0666ab59e9310a3d24ed237029a7ce34d976796349765ac96b8d769f6df19090f1f471b77a25ca391971efde8a1ea63bb83111bd8bec8e5cc9b2cd
+"dotenv@npm:9.0.2":
+  version: 9.0.2
+  resolution: "dotenv@npm:9.0.2"
+  checksum: 6b7980330a653089bc9b83362248547791151ee74f9881eb223ac2f4d641b174b708f77315d88708b551d45b4177afd3ba71bca4832f8807e003f71c2a0f83e7
   languageName: node
   linkType: hard
 
