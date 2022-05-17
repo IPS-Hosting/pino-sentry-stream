@@ -33,7 +33,7 @@
     "@semantic-release/npm": "9.0.1",
     "@sentry/node": "6.19.7",
     "@tsconfig/node14": "1.0.1",
-    "@types/node": "16.11.35",
+    "@types/node": "16.11.36",
     "@types/semantic-release": "17.2.3",
     "@typescript-eslint/eslint-plugin": "5.24.0",
     "@typescript-eslint/parser": "5.24.0",
