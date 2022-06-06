@@ -1,4 +1,4 @@
-import { value Transform } from 'stream'
+import { Transform } from 'stream'
 import type * as Sentry from '@sentry/node'
 
 export class ParsedSentryError extends Error {
