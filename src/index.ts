@@ -1,5 +1,5 @@
-import { Transform } from 'stream'
-import * as Sentry from '@sentry/node'
+import { value Transform } from 'stream'
+import type * as Sentry from '@sentry/node'
 
 export class ParsedSentryError extends Error {
 	public constructor(message: string, stack?: string, type?: string) {
@@ -14,16 +14,16 @@ export class ParsedSentryError extends Error {
 }
 
 export type SeverityMap = {
-	[value in string | number]: Sentry.Severity
+	[value in string | number]: Sentry.SeverityLevel
 }
 
 export const DefaultSeverityMap: SeverityMap = {
-	10: Sentry.Severity.Debug, // trace
-	20: Sentry.Severity.Debug, // debug
-	30: Sentry.Severity.Info, // info
-	40: Sentry.Severity.Warning, // warn
-	50: Sentry.Severity.Error, // error
-	60: Sentry.Severity.Fatal, // fatal
+	10: 'debug',
+	20: 'debug',
+	30: 'info',
+	40: 'warning',
+	50: 'error',
+	60: 'fatal',
 }
 
 export interface PinoLog {
@@ -39,7 +39,7 @@ export interface PinoSentryStreamOptions {
 	callback?: (obj: {
 		log: PinoLog
 		scope: Sentry.Scope
-		severity: Sentry.Severity
+		severity: Sentry.SeverityLevel
 	}) => void | false
 }
 
@@ -56,7 +56,7 @@ export function pinoSentryStream({
 				sentry.withScope((scope) => {
 					const parsedLog = JSON.parse(log) as PinoLog
 					severityMap ??= DefaultSeverityMap
-					const severity = severityMap[parsedLog.level] ?? Sentry.Severity.Info
+					const severity = severityMap[parsedLog.level] ?? 'info'
 
 					if (callback) {
 						if (callback({ log: parsedLog, scope, severity }) === false) {
@@ -86,10 +86,7 @@ export function pinoSentryStream({
 
 					let capturedException = false
 
-					if (
-						severity === Sentry.Severity.Error ||
-						severity === Sentry.Severity.Fatal
-					) {
+					if (severity === 'error' || severity === 'fatal') {
 						if (typeof parsedLog.stack === 'string') {
 							// The error object was given directly to a pino logger.
 							// logger.error(new Error('Something went wrong.'))

@@ -1,69 +1,69 @@
 {
-  "name": "@ips-hosting/pino-sentry-stream",
-  "version": "1.0.2",
-  "description": "A pino stream to automatically pass errors to Sentry.",
-  "license": "MIT",
-  "scripts": {
-    "build": "tsc --project ./tsconfig.json",
-    "tsc:check": "tsc --project ./tsconfig.json --noEmit",
-    "dev": "nodemon",
-    "start": "node ./dist/index.js",
-    "lint": "eslint \"src/**/*.ts\"",
-    "lint:fix": "eslint --fix \"src/**/*.ts\"",
-    "test": "yarn tsc:check",
-    "prepack": "yarn build"
-  },
-  "files": [
-    "dist/**/*.js",
-    "dist/**/*.js.map",
-    "dist/**/*.d.ts"
-  ],
-  "main": "dist/index.js",
-  "types": "./dist/index.d.ts",
-  "sideEffects": false,
-  "publishConfig": {
-    "access": "public"
-  },
-  "peerDependencies": {
-    "@sentry/node": "^6.0.0"
-  },
-  "devDependencies": {
-    "@semantic-release/changelog": "6.0.1",
-    "@semantic-release/git": "10.0.1",
-    "@semantic-release/npm": "9.0.1",
-    "@sentry/node": "6.19.7",
-    "@tsconfig/node14": "1.0.1",
-    "@types/node": "16.11.36",
-    "@types/semantic-release": "17.2.3",
-    "@typescript-eslint/eslint-plugin": "5.25.0",
-    "@typescript-eslint/parser": "5.25.0",
-    "@typescript-eslint/typescript-estree": "5.25.0",
-    "dotenv": "16.0.1",
-    "eslint": "8.16.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.0.0",
-    "nodemon": "2.0.16",
-    "prettier": "2.6.2",
-    "semantic-release": "19.0.2",
-    "ts-node": "10.7.0",
-    "typescript": "4.6.4"
-  },
-  "release": {
-    "branches": [
-      "main",
-      {
-        "name": "next",
-        "prelease": true
-      }
-    ],
-    "preset": "angular",
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/github",
-      "@semantic-release/git"
-    ]
-  }
+	"name": "@ips-hosting/pino-sentry-stream",
+	"version": "1.0.2",
+	"description": "A pino stream to automatically pass errors to Sentry.",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc --project ./tsconfig.json",
+		"tsc:check": "tsc --project ./tsconfig.json --noEmit",
+		"dev": "nodemon",
+		"start": "node ./dist/index.js",
+		"lint": "eslint \"src/**/*.ts\"",
+		"lint:fix": "eslint --fix \"src/**/*.ts\"",
+		"test": "yarn tsc:check",
+		"prepack": "yarn build"
+	},
+	"files": [
+		"dist/**/*.js",
+		"dist/**/*.js.map",
+		"dist/**/*.d.ts"
+	],
+	"main": "dist/index.js",
+	"types": "./dist/index.d.ts",
+	"sideEffects": false,
+	"publishConfig": {
+		"access": "public"
+	},
+	"peerDependencies": {
+		"@sentry/node": "^7.0.0"
+	},
+	"devDependencies": {
+		"@semantic-release/changelog": "6.0.1",
+		"@semantic-release/git": "10.0.1",
+		"@semantic-release/npm": "9.0.1",
+		"@sentry/node": "7.0.0",
+		"@tsconfig/node14": "1.0.1",
+		"@types/node": "16.11.38",
+		"@types/semantic-release": "17.2.3",
+		"@typescript-eslint/eslint-plugin": "5.27.0",
+		"@typescript-eslint/parser": "5.27.0",
+		"@typescript-eslint/typescript-estree": "5.27.0",
+		"dotenv": "16.0.1",
+		"eslint": "8.17.0",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-plugin-prettier": "4.0.0",
+		"nodemon": "2.0.16",
+		"prettier": "2.6.2",
+		"semantic-release": "19.0.2",
+		"ts-node": "10.8.1",
+		"typescript": "4.7.3"
+	},
+	"release": {
+		"branches": [
+			"main",
+			{
+				"name": "next",
+				"prerelease": true
+			}
+		],
+		"preset": "angular",
+		"plugins": [
+			"@semantic-release/commit-analyzer",
+			"@semantic-release/release-notes-generator",
+			"@semantic-release/changelog",
+			"@semantic-release/npm",
+			"@semantic-release/github",
+			"@semantic-release/git"
+		]
+	}
 }
