@@ -1,3 +1,22 @@
+# [2.0.0](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v1.0.2...v2.0.0) (2022-06-06)
+
+
+### Bug Fixes
+
+* remove typo in stream import ([ff12b50](https://github.com/IPS-Hosting/pino-sentry-stream/commit/ff12b505c726844f6a4486efa0362cdd3053d0d6))
+
+
+### Features
+
+* upgrade to Sentry v7 ([db9c72c](https://github.com/IPS-Hosting/pino-sentry-stream/commit/db9c72ce6e12488025ac40f51c8a56b789ec50b7))
+
+
+### BREAKING CHANGES
+
+* Requires at least @sentry/node v7.
+
+Signed-off-by: Pascal Sthamer <10992664+P4sca1@users.noreply.github.com>
+
 ## [1.0.2](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v1.0.1...v1.0.2) (2021-04-27)
 
 
