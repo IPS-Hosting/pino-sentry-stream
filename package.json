@@ -41,7 +41,7 @@
 		"dotenv": "16.0.1",
 		"eslint": "8.17.0",
 		"eslint-config-prettier": "8.5.0",
-		"eslint-plugin-prettier": "4.0.0",
+		"eslint-plugin-prettier": "5.0.0",
 		"nodemon": "2.0.16",
 		"prettier": "3.0.0",
 		"semantic-release": "19.0.2",
