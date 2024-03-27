@@ -116,7 +116,7 @@ __metadata:
     "@semantic-release/git": 10.0.1
     "@semantic-release/npm": 9.0.1
     "@sentry/node": 7.0.0
-    "@tsconfig/node14": 1.0.1
+    "@tsconfig/node14": 14.1.2
     "@types/node": 20.8.8
     "@types/semantic-release": 20.0.1
     "@typescript-eslint/eslint-plugin": 7.0.1
@@ -784,7 +784,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node14@npm:1.0.1, @tsconfig/node14@npm:^1.0.0":
+"@tsconfig/node14@npm:14.1.2":
+  version: 14.1.2
+  resolution: "@tsconfig/node14@npm:14.1.2"
+  checksum: f5934cebc6c8790b28a145d8abbafcb0bd23a405ebcb790bd9f524a2750757d5675b418583bddaed760894a18a0a59a8cbfec1979c90e388d7ad784a9519193f
+  languageName: node
+  linkType: hard
+
+"@tsconfig/node14@npm:^1.0.0":
   version: 1.0.1
   resolution: "@tsconfig/node14@npm:1.0.1"
   checksum: 976345e896c0f059867f94f8d0f6ddb8b1844fb62bf36b727de8a9a68f024857e5db97ed51d3325e23e0616a5e48c034ff51a8d595b3fe7e955f3587540489be
