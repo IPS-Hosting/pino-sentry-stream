@@ -44,7 +44,7 @@
 		"eslint-plugin-prettier": "5.0.0",
 		"nodemon": "2.0.16",
 		"prettier": "3.0.0",
-		"semantic-release": "19.0.2",
+		"semantic-release": "23.1.1",
 		"ts-node": "10.8.1",
 		"typescript": "4.7.3"
 	},
