@@ -25,13 +25,13 @@
 		"access": "public"
 	},
 	"peerDependencies": {
-		"@sentry/node": "^7.0.0"
+		"@sentry/node": "^7.0.0 || ^8.0.0"
 	},
 	"devDependencies": {
 		"@semantic-release/changelog": "6.0.1",
 		"@semantic-release/git": "10.0.1",
 		"@semantic-release/npm": "9.0.1",
-		"@sentry/node": "7.0.0",
+		"@sentry/node": "8.7.0",
 		"@tsconfig/node14": "1.0.1",
 		"@types/node": "20.8.8",
 		"@types/semantic-release": "20.0.1",
