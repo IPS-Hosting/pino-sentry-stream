@@ -6,15 +6,20 @@ A pino stream to automatically pass errors to Sentry.
 # npm
 npm install @ips-hosting/pino-sentry-stream
 
+# pnpm
+pnpm add @ips-hosting/pino-sentry-stream
+
 # yarn
 yarn add @ips-hosting/pino-sentry-stream
 ```
 
+The package is ESM-only and requires at least Node.js 20.
+
 ## Usage
-The code is compiled to target Node.js 14.
 ```ts
 import { pinoSentryStream } from '@ips-hosting/pino-sentry-stream'
 import * as Sentry from '@sentry/node'
+import { pino } from 'pino'
 // ...
 
 /**
@@ -24,32 +29,31 @@ import * as Sentry from '@sentry/node'
  * callback (optional): (obj: { log: PinoLog; scope: Sentry.Scope; severity: Sentry.Severity }) => void | false
  * 	Called for every pino log message. Use to assign custom properties to the sentry scope. Return false to prevent that message from being sent to sentry.
  */
-const stream = pinoSentryStream({ sentry: Sentry });
+const sentryStream = pinoSentryStream({ sentry: Sentry });
 
 // With pino
 // All messages will directly go to Sentry.
 // They won't be passed to stdout so you don't see them in your terminal.
 const pinoOpts = { /* ... */ };
-const pinoLogger = pino(pinoOpts, stream);
+const pinoLogger = pino(pinoOpts, sentryStream);
 
-// With pino-multi-stream
+// Using pino.multistream
 // You can send log messages to multiple destination streams.
 // In this example, log messages are sent both to stdout and Sentry, while being prettified in development.
-const pinomsLogger = pinoms({
-	// ...
-	streams: [
-		// Log everything to stdout in production, prettify in dev environments.
+const streams = [
+	// Log everything to stdout in production, prettify in dev environments.
 		{
 			level: 'debug',
 			stream: process.env.NODE_ENV === 'production'
 				? process.stdout
-				: pinoms.prettyStream(),
+				: await import('pino-pretty').then((m) => m.default.default()),
 		},
 		// In addition to logging to stdout, send everything starting from level info to sentry.
 		{
 			level: 'info',
-			stream,
+			stream: sentryStream,
 		},
-	],
-})
+]
+
+const pinoLogger = pino(pinoOpts, pino.multiStream(streams))
 ```

@@ -7,24 +7,25 @@ on:
 jobs:
   release:
     name: Release
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 20
+          cache: pnpm
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: pnpm install
 
       - name: Test
-        run: yarn test
+        run: pnpm run test
 
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn semantic-release
+        run: pnpm exec semantic-release

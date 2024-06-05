@@ -1,15 +1,17 @@
 {
-  "extends": "@tsconfig/node14",
-  "compilerOptions": {
-	"outDir": "./dist",
-	"rootDir": "./src",
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./dist",
+		"sourceMap": true,
+		"declaration": true,
 
-	"sourceMap": true,
-	"declaration": true,
-	"importsNotUsedAsValues": "error",
-	"noFallthroughCasesInSwitch": true,
-	"noUncheckedIndexedAccess": true,
-	"noUnusedLocals": true,
-  },
-  "include": ["src/**/*.ts"]
+		"target": "es6",
+		"module": "NodeNext",
+		"moduleResolution": "nodenext",
+
+		"strict": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true
+	},
+	"include": ["src/**/*.ts"]
 }
