@@ -1,4 +1,4 @@
-import { Transform } from 'stream'
+import { Transform } from 'node:stream'
 import type * as Sentry from '@sentry/node'
 
 export class ParsedSentryError extends Error {
@@ -40,7 +40,7 @@ export interface PinoSentryStreamOptions {
 		log: PinoLog
 		scope: Sentry.Scope
 		severity: Sentry.SeverityLevel
-	}) => void | false
+	}) => undefined | false
 }
 
 export function pinoSentryStream({
@@ -96,8 +96,8 @@ export function pinoSentryStream({
 									parsedLog.stack,
 									typeof parsedLog.type === 'string'
 										? parsedLog.type
-										: undefined
-								)
+										: undefined,
+								),
 							)
 							capturedException = true
 						} else if (
@@ -124,8 +124,8 @@ export function pinoSentryStream({
 								new ParsedSentryError(
 									typeof err.message === 'string' ? err.message : parsedLog.msg,
 									typeof err.stack === 'string' ? err.stack : undefined,
-									typeof err.type === 'string' ? err.type : undefined
-								)
+									typeof err.type === 'string' ? err.type : undefined,
+								),
 							)
 							capturedException = true
 						}
