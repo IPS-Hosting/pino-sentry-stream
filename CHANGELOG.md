@@ -1,3 +1,18 @@
+# [3.0.0](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v2.0.0...v3.0.0) (2024-06-05)
+
+
+### Features
+
+* support @sentry/node 8 ([67e7660](https://github.com/IPS-Hosting/pino-sentry-stream/commit/67e7660b9204d38fe1dfbfa16ef02ed8da149500))
+
+
+### BREAKING CHANGES
+
+* At least Node.js 20 is now required
+* The package is now ESM-only
+
+Signed-off-by: Pascal Sthamer <10992664+P4sca1@users.noreply.github.com>
+
 # [2.0.0](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v1.0.2...v2.0.0) (2022-06-06)
 
 
