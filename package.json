@@ -31,15 +31,15 @@
 		"@sentry/node": "^7.0.0 || ^8.0.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.8.0",
+		"@biomejs/biome": "1.8.3",
 		"@semantic-release/changelog": "6.0.3",
 		"@semantic-release/git": "10.0.1",
 		"@semantic-release/npm": "12.0.1",
-		"@sentry/node": "8.7.0",
-		"@types/node": "20.14.2",
+		"@sentry/node": "8.13.0",
+		"@types/node": "20.14.9",
 		"@types/semantic-release": "20.0.6",
 		"semantic-release": "24.0.0",
-		"typescript": "5.4.5"
+		"typescript": "5.5.3"
 	},
 	"release": {
 		"branches": [
@@ -60,7 +60,7 @@
 		]
 	},
 	"type": "module",
-	"packageManager": "pnpm@9.1.4+sha256.30a1801ac4e723779efed13a21f4c39f9eb6c9fbb4ced101bce06b422593d7c9",
+	"packageManager": "pnpm@9.4.0",
 	"engines": {
 		"node": ">=20"
 	}
