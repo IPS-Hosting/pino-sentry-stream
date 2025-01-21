@@ -1,5 +1,6 @@
 import { Transform } from 'node:stream'
-import type * as Sentry from '@sentry/node'
+import type * as SentryNextJs from '@sentry/nextjs'
+import type * as SentryNode from '@sentry/node'
 
 export class ParsedSentryError extends Error {
 	public constructor(message: string, stack?: string, type?: string) {
@@ -14,7 +15,9 @@ export class ParsedSentryError extends Error {
 }
 
 export type SeverityMap = {
-	[value in string | number]: Sentry.SeverityLevel
+	[value in string | number]:
+	| SentryNode.SeverityLevel
+	| SentryNextJs.SeverityLevel
 }
 
 export const DefaultSeverityMap: SeverityMap = {
@@ -34,12 +37,12 @@ export interface PinoLog {
 }
 
 export interface PinoSentryStreamOptions {
-	sentry: typeof Sentry
+	sentry: typeof SentryNextJs | typeof SentryNode
 	severityMap?: SeverityMap
 	callback?: (obj: {
 		log: PinoLog
-		scope: Sentry.Scope
-		severity: Sentry.SeverityLevel
+		scope: SentryNode.Scope | SentryNextJs.Scope
+		severity: SentryNode.SeverityLevel | SentryNextJs.SeverityLevel
 	}) => undefined | false
 }
 
