@@ -35,6 +35,7 @@
 		"@semantic-release/changelog": "6.0.3",
 		"@semantic-release/git": "10.0.1",
 		"@semantic-release/npm": "12.0.1",
+		"@sentry/nextjs": "^8.54.0",
 		"@sentry/node": "8.7.0",
 		"@types/node": "20.14.2",
 		"@types/semantic-release": "20.0.6",
