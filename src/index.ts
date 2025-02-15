@@ -1,6 +1,11 @@
 import { Transform } from 'node:stream'
 import type * as Sentry from '@sentry/core'
 
+type GenericSentry = Pick<
+	typeof Sentry,
+	'withScope' | 'captureException' | 'captureMessage'
+>
+
 export class ParsedSentryError extends Error {
 	public constructor(message: string, stack?: string, type?: string) {
 		super(message)
@@ -34,7 +39,7 @@ export interface PinoLog {
 }
 
 export interface PinoSentryStreamOptions {
-	sentry: typeof Sentry
+	sentry: GenericSentry
 	severityMap?: SeverityMap
 	callback?: (obj: {
 		log: PinoLog
