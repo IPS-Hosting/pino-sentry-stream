@@ -23,9 +23,6 @@ importers:
       '@sentry/core':
         specifier: 9.1.0
         version: 9.1.0
-      '@types/node':
-        specifier: 22.13.4
-        version: 22.13.4
       '@types/semantic-release':
         specifier: 20.0.6
         version: 20.0.6
