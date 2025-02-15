@@ -92,9 +92,7 @@ export function pinoSentryStream({
 							new ParsedSentryError(
 								parsedLog.msg,
 								parsedLog.stack,
-								typeof parsedLog.type === 'string'
-									? parsedLog.type
-									: undefined,
+								typeof parsedLog.type === 'string' ? parsedLog.type : undefined,
 							),
 						)
 						capturedException = true
