@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v3.1.0...v3.1.1) (2025-02-15)
+
+
+### Bug Fixes
+
+* **types:** pick only required methods from @sentry/core ([11cd11c](https://github.com/IPS-Hosting/pino-sentry-stream/commit/11cd11cbb23c731fb3e7a41572f2f8c04833d5ac))
+
 # [3.1.0](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v3.0.0...v3.1.0) (2025-02-15)
 
 
