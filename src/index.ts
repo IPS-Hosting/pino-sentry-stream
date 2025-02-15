@@ -1,5 +1,5 @@
 import { Transform } from 'node:stream'
-import type * as Sentry from '@sentry/node'
+import type * as Sentry from '@sentry/core'
 
 export class ParsedSentryError extends Error {
 	public constructor(message: string, stack?: string, type?: string) {
