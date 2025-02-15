@@ -1,3 +1,15 @@
+# [3.1.0](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v3.0.0...v3.1.0) (2025-02-15)
+
+
+### Bug Fixes
+
+* remove wrapping sentry in setImmediate to support non node.js environments ([6c6ad85](https://github.com/IPS-Hosting/pino-sentry-stream/commit/6c6ad85219c7e6d62eb4a77005037b5ceea74902))
+
+
+### Features
+
+* support sentry 9 and support other runtimes than node.js ([03c2f5c](https://github.com/IPS-Hosting/pino-sentry-stream/commit/03c2f5cfce18dcbf81009cea772f3345f1b6b750))
+
 # [3.0.0](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v2.0.0...v3.0.0) (2024-06-05)
 
 
