@@ -21,8 +21,8 @@ importers:
         specifier: 12.0.2
         version: 12.0.2(semantic-release@24.2.7(typescript@5.8.3))
       '@sentry/core':
-        specifier: 9.43.0
-        version: 9.43.0
+        specifier: 9.44.0
+        version: 9.44.0
       '@types/semantic-release':
         specifier: 20.0.6
         version: 20.0.6
@@ -219,8 +219,8 @@ packages:
     peerDependencies:
       semantic-release: '>=20.1.0'
 
-  '@sentry/core@9.43.0':
-    resolution: {integrity: sha512-xuvERSUkSNBAldIlgihX3fz+JkcaAPvg0HulPtv3BH9qrKqvataeQ8TiTnqiRC7kWzF7EcxhQJ6WJRl/r3aH3w==}
+  '@sentry/core@9.44.0':
+    resolution: {integrity: sha512-U+KBNGgq/eXIj226CPtRk+n5dx0q1xGVvbLbyfAyeek9C/wxQ3f+mvqeVqF9cx8FfrWIOeDM1F8ISH5uRkjjQg==}
     engines: {node: '>=18'}
 
   '@sindresorhus/is@4.6.0':
@@ -1538,7 +1538,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@sentry/core@9.43.0': {}
+  '@sentry/core@9.44.0': {}
 
   '@sindresorhus/is@4.6.0': {}
 
