@@ -1,5 +1,11 @@
 {
 	"enabled": true,
 	"baseBranchPatterns": ["dev"],
-	"extends": ["github>IPS-Hosting/renovate-config"]
+	"extends": ["github>IPS-Hosting/renovate-config"],
+	"packageRules": [
+		{
+			"matchDepTypes": ["peerDependencies"],
+			"semanticCommitType": "fix"
+		}
+	]
 }
