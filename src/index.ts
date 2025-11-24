@@ -71,14 +71,20 @@ export function pinoSentryStream({
 				}
 
 				// Assign tags
-				if (typeof parsedLog['tags'] === 'object' && parsedLog['tags'] !== null) {
+				if (
+					typeof parsedLog['tags'] === 'object' &&
+					parsedLog['tags'] !== null
+				) {
 					for (const [tag, value] of Object.entries(parsedLog['tags'])) {
 						scope.setTag(tag, value)
 					}
 				}
 
 				// Assign user
-				if (typeof parsedLog['user'] === 'object' && parsedLog['user'] !== null) {
+				if (
+					typeof parsedLog['user'] === 'object' &&
+					parsedLog['user'] !== null
+				) {
 					scope.setUser(parsedLog['user'])
 				}
 
@@ -99,7 +105,9 @@ export function pinoSentryStream({
 							new ParsedSentryError(
 								parsedLog.msg,
 								parsedLog['stack'],
-								typeof parsedLog['type'] === 'string' ? parsedLog['type'] : undefined,
+								typeof parsedLog['type'] === 'string'
+									? parsedLog['type']
+									: undefined,
 							),
 						)
 						capturedException = true
@@ -125,7 +133,9 @@ export function pinoSentryStream({
 
 						sentry.captureException(
 							new ParsedSentryError(
-								typeof err['message'] === 'string' ? err['message'] : parsedLog.msg,
+								typeof err['message'] === 'string'
+									? err['message']
+									: parsedLog.msg,
 								typeof err['stack'] === 'string' ? err['stack'] : undefined,
 								typeof err['type'] === 'string' ? err['type'] : undefined,
 							),

@@ -1,16 +1,11 @@
 {
-	"extends": [
-		"@tsconfig/node20/tsconfig.json",
-		"@tsconfig/strictest"
-	],
+	"extends": ["@tsconfig/node20/tsconfig.json", "@tsconfig/strictest"],
 	"compilerOptions": {
 		"rootDir": "./src",
 		"outDir": "./dist",
 		"sourceMap": true,
 		"declaration": true,
-		"moduleResolution": "nodenext",
+		"moduleResolution": "nodenext"
 	},
-	"include": [
-		"src/**/*.ts"
-	]
+	"include": ["src/**/*.ts"]
 }
