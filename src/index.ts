@@ -55,7 +55,7 @@ export function pinoSentryStream({
 }: PinoSentryStreamOptions) {
 	return new Transform({
 		objectMode: true,
-		transform(log: string, enc, transformCallback) {
+		transform(log: string, _enc, transformCallback) {
 			sentry.withScope((scope) => {
 				const parsedLog = JSON.parse(log) as PinoLog
 				severityMap ??= DefaultSeverityMap
