@@ -1,9 +1,20 @@
 name: Release
+
 on:
   push:
     branches:
       - main
       - next
+
+permissions:
+  # required for npm trusted publishing with OIDC.
+  # https://docs.npmjs.com/trusted-publishers#step-2-configure-your-cicd-workflow
+  # https://github.com/semantic-release/npm?tab=readme-ov-file#trusted-publishing-from-github-actions
+  contents: write # to be able to publish a GitHub release
+  issues: write # to be able to comment on released issues
+  pull-requests: write # to be able to comment on released pull requests
+  id-token: write # to enable use of OIDC for trusted publishing and npm provenance
+
 jobs:
   release:
     name: Release
@@ -30,5 +41,4 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm exec semantic-release
