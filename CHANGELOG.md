@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v3.1.2...v3.1.3) (2025-11-24)
+
+
+### Bug Fixes
+
+* use trusted publishing ([7cc3659](https://github.com/IPS-Hosting/pino-sentry-stream/commit/7cc36592ccf8465617de5b1a2bd53048019a9cef))
+
 ## [3.1.2](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v3.1.1...v3.1.2) (2025-11-24)
 
 
