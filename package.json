@@ -36,6 +36,9 @@
 		"@semantic-release/git": "10.0.1",
 		"@semantic-release/npm": "13.1.2",
 		"@sentry/core": "10.26.0",
+		"@tsconfig/node20": "20.1.8",
+		"@tsconfig/strictest": "2.0.8",
+		"@types/node": "20.19.25",
 		"semantic-release": "25.0.2",
 		"typescript": "5.9.3"
 	},

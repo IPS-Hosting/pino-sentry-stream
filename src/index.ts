@@ -10,7 +10,9 @@ export class ParsedSentryError extends Error {
 	public constructor(message: string, stack?: string, type?: string) {
 		super(message)
 
-		this.stack = stack
+		if (stack) {
+			this.stack = stack
+		}
 
 		if (type) {
 			this.name = type
@@ -69,15 +71,15 @@ export function pinoSentryStream({
 				}
 
 				// Assign tags
-				if (typeof parsedLog.tags === 'object' && parsedLog.tags !== null) {
-					for (const [tag, value] of Object.entries(parsedLog.tags)) {
+				if (typeof parsedLog['tags'] === 'object' && parsedLog['tags'] !== null) {
+					for (const [tag, value] of Object.entries(parsedLog['tags'])) {
 						scope.setTag(tag, value)
 					}
 				}
 
 				// Assign user
-				if (typeof parsedLog.user === 'object' && parsedLog.user !== null) {
-					scope.setUser(parsedLog.user)
+				if (typeof parsedLog['user'] === 'object' && parsedLog['user'] !== null) {
+					scope.setUser(parsedLog['user'])
 				}
 
 				// Pass every key / value pair assigned to the log that we do not handle manually to sentry.
@@ -90,27 +92,27 @@ export function pinoSentryStream({
 				let capturedException = false
 
 				if (severity === 'error' || severity === 'fatal') {
-					if (typeof parsedLog.stack === 'string') {
+					if (typeof parsedLog['stack'] === 'string') {
 						// The error object was given directly to a pino logger.
 						// logger.error(new Error('Something went wrong.'))
 						sentry.captureException(
 							new ParsedSentryError(
 								parsedLog.msg,
-								parsedLog.stack,
-								typeof parsedLog.type === 'string' ? parsedLog.type : undefined,
+								parsedLog['stack'],
+								typeof parsedLog['type'] === 'string' ? parsedLog['type'] : undefined,
 							),
 						)
 						capturedException = true
 					} else if (
-						typeof parsedLog.err === 'object' &&
-						parsedLog.err !== null
+						typeof parsedLog['err'] === 'object' &&
+						parsedLog['err'] !== null
 					) {
 						// The error object was given via an object.
 						// logger.error({ err: new Error('Something went wrong.')}, 'Some additional message.')
-						const err = parsedLog.err as Record<string, unknown>
+						const err = parsedLog['err'] as Record<string, unknown>
 
 						// Keep log message as an extra. The error message is used as the main message if it exists.
-						if (err.message) {
+						if (err['message']) {
 							scope.setExtra('message', parsedLog.msg)
 						}
 
@@ -123,9 +125,9 @@ export function pinoSentryStream({
 
 						sentry.captureException(
 							new ParsedSentryError(
-								typeof err.message === 'string' ? err.message : parsedLog.msg,
-								typeof err.stack === 'string' ? err.stack : undefined,
-								typeof err.type === 'string' ? err.type : undefined,
+								typeof err['message'] === 'string' ? err['message'] : parsedLog.msg,
+								typeof err['stack'] === 'string' ? err['stack'] : undefined,
+								typeof err['type'] === 'string' ? err['type'] : undefined,
 							),
 						)
 						capturedException = true
@@ -133,8 +135,8 @@ export function pinoSentryStream({
 				}
 
 				if (!capturedException) {
-					if (parsedLog.err) {
-						scope.setExtra('err', parsedLog.err)
+					if (parsedLog['err']) {
+						scope.setExtra('err', parsedLog['err'])
 					}
 
 					sentry.captureMessage(parsedLog.msg, severity)
