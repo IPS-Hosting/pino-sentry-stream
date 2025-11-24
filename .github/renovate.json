@@ -1,9 +1,5 @@
 {
 	"enabled": true,
-	"baseBranchPatterns": [
-		"dev"
-	],
-	"extends": [
-		"github>IPS-Hosting/renovate-config"
-	]
+	"baseBranchPatterns": ["dev"],
+	"extends": ["github>IPS-Hosting/renovate-config"]
 }
