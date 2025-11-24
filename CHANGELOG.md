@@ -1,3 +1,10 @@
+## [3.1.2](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v3.1.1...v3.1.2) (2025-11-24)
+
+
+### Bug Fixes
+
+* support @sentry/core v10 (use fix commit type for peer dependency updates) ([7bef641](https://github.com/IPS-Hosting/pino-sentry-stream/commit/7bef641a860a7068808b9f0876b0bba3cf251b27))
+
 ## [3.1.1](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v3.1.0...v3.1.1) (2025-02-15)
 
 
