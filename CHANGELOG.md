@@ -1,3 +1,10 @@
+## [3.1.4](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v3.1.3...v3.1.4) (2025-11-24)
+
+
+### Bug Fixes
+
+* specify repository info in package.json ([94ecad7](https://github.com/IPS-Hosting/pino-sentry-stream/commit/94ecad795a41e1edfe564bb2af5f6af20a755f80))
+
 ## [3.1.3](https://github.com/IPS-Hosting/pino-sentry-stream/compare/v3.1.2...v3.1.3) (2025-11-24)
 
 
