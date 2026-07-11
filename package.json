@@ -37,7 +37,7 @@
 		"@semantic-release/npm": "13.1.2",
 		"@sentry/core": "10.26.0",
 		"semantic-release": "25.0.2",
-		"typescript": "5.9.3"
+		"typescript": "7.0.2"
 	},
 	"release": {
 		"branches": [
