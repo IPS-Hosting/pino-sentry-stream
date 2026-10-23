@@ -33,7 +33,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.3.6",
 		"@semantic-release/changelog": "6.0.3",
-		"@semantic-release/git": "10.0.1",
+		"@semantic-release/git": "11.0.1",
 		"@semantic-release/npm": "13.1.2",
 		"@sentry/core": "10.26.0",
 		"semantic-release": "25.0.2",
