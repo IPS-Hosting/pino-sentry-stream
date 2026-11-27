@@ -21,8 +21,8 @@ importers:
         specifier: 13.1.2
         version: 13.1.2(semantic-release@25.0.2(typescript@5.9.3))
       '@sentry/core':
-        specifier: 10.26.0
-        version: 10.26.0
+        specifier: 11.17.0
+        version: 11.17.0
       semantic-release:
         specifier: 25.0.2
         version: 25.0.2(typescript@5.9.3)
@@ -220,9 +220,13 @@ packages:
     peerDependencies:
       semantic-release: '>=20.1.0'
 
-  '@sentry/core@10.26.0':
-    resolution: {integrity: sha512-TjDe5QI37SLuV0q3nMOH8JcPZhv2e85FALaQMIhRILH9Ce6G7xW5GSjmH91NUVq8yc3XtiqYlz/EenEZActc4Q==}
-    engines: {node: '>=18'}
+  '@sentry/conventions@0.35.0':
+    resolution: {integrity: sha512-bq2ecu6zaBni0gG5bHN9cY7fmUsOW49ntjGZ6VA69PVAa1Uk1NvgF1SdTGoVC0zkqQKziTnxzOs9KuuVlpb26w==}
+    engines: {node: '>=14'}
+
+  '@sentry/core@11.17.0':
+    resolution: {integrity: sha512-Tf9XOBEMeGdZZNaCBzFTk1lN/q9gzSnWtnNRZW9IYtokM99VVfx4wTWVeg6qZ++c6mNybmhUbltnN7b87RqOwQ==}
+    engines: {node: '>=20.19.0 <22.0.0 || >=22.12.0 <23.0.0 || >=23.2.0'}
 
   '@sindresorhus/is@4.6.0':
     resolution: {integrity: sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==}
@@ -1575,7 +1579,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@sentry/core@10.26.0': {}
+  '@sentry/conventions@0.35.0': {}
+
+  '@sentry/core@11.17.0':
+    dependencies:
+      '@sentry/conventions': 0.35.0
 
   '@sindresorhus/is@4.6.0': {}
 
